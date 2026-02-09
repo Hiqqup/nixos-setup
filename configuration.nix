@@ -3,10 +3,6 @@
 let
 in
 {
-    imports =
-        [ # Include the results of the hardware scan.
-        ./hardware-configuration.nix
-        ];
     nix.settings.experimental-features = ["nix-command" "flakes"];
     boot.loader.systemd-boot.enable = true;
     boot.loader.efi.canTouchEfiVariables = true;
@@ -47,6 +43,9 @@ in
         isNormalUser = true;
         description = "ju";
         extraGroups = [ "networkmanager" "wheel" ];
+        packages = with pkgs; [
+            home-manager
+        ];
     };
     programs.firefox.enable = true;
     environment.systemPackages = with pkgs; [
@@ -56,5 +55,5 @@ in
         unzip
         neovim
     ];
-    system.stateVersion = "25.05"; # Did you read the comment05
+    system.stateVersion = "25.05"; 
 }
