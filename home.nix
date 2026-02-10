@@ -24,7 +24,6 @@ in
         neofetch
         oath-toolkit
         lazygit
-        jetbrains.idea-ultimate
         tree
     ];
     programs.bash = {
