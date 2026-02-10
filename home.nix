@@ -30,8 +30,8 @@ in
         enable = true;
         shellAliases = {
             vim = "nvim";
-            nix-rebuild  = "sudo nixos-rebuild switch --flake ~/Documents/nixos-setup#nixos --impure";
-            home-rebuild = "home-manager switch --flake ~/Documents/nixos-setup#ju";
+            nix-rebuild  = "sudo nixos-rebuild switch --flake ~/src/nixos-setup#nixos --impure";
+            home-rebuild = "home-manager switch --flake ~/src/nixos-setup#ju";
         };
         initExtra = ''
             set -o vi
