@@ -20,7 +20,6 @@
       inherit system;
       modules = [
         ./configuration.nix
-        ./dev-dependencies.nix
         /etc/nixos/hardware-configuration.nix
       ];
     };

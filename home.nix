@@ -19,12 +19,37 @@ in
     nixpkgs.config.allowUnfree = true;
 
     home.packages = with pkgs; [ 
+        # vim
         neovide
         myNeovim
-        neofetch
-        oath-toolkit
+        tmux
+        clangd
+        # zpd / fotolyrik
+        jetbrains.idea-ultimate
+        nodejs_22
+        maven
+        apacheHttpd
+        # c/c++
+        jetbrains.clion
+        cmake
+        gcc13
+        emscripten
+        # assets
+        blender
+        krita
+        # video editing
+        kdePackages.kdenlive
+        audacity
+        # git stuff
+        gh
         lazygit
+        # misc / just for fun
         tree
+        cloc
+        python312
+        rclone
+        oath-toolkit
+        neofetch
     ];
     programs.bash = {
         enable = true;

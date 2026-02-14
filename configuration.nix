@@ -54,6 +54,15 @@ in
         git
         unzip
         neovim
+        docker-compose
     ];
+
+    virtualisation.docker.enable = true;
+
+    services.postgresql = {
+      enable = true;
+      package = pkgs.postgresql_17;
+    };
+
     system.stateVersion = "25.05"; 
 }
