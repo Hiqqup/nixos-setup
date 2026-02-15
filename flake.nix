@@ -16,6 +16,7 @@
     pkgs = import nixpkgs { inherit system; };
   in
   {
+    legacyPackages.${system} = nixpkgs.legacyPackages.${system}; # make searchable
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       inherit system;
       modules = [

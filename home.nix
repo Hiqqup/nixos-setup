@@ -23,7 +23,7 @@ in
         neovide
         myNeovim
         tmux
-        clangd
+        llvmPackages_18.clang-tools
         # zpd / fotolyrik
         jetbrains.idea-ultimate
         nodejs_22
@@ -50,6 +50,7 @@ in
         rclone
         oath-toolkit
         neofetch
+        spotify
     ];
     programs.bash = {
         enable = true;
