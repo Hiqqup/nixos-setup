@@ -25,7 +25,7 @@ in
         tmux
         llvmPackages_18.clang-tools
         # zpd / fotolyrik
-        jetbrains.idea-ultimate
+        jetbrains.idea
         nodejs_22
         maven
         apacheHttpd
@@ -50,6 +50,7 @@ in
         oath-toolkit
         neofetch
         spotify
+        easyroam-connect-desktop
     ];
     programs.bash = {
         enable = true;
@@ -69,8 +70,10 @@ in
     };
     programs.git = {
         enable = true;
-        userEmail = "71655937+Hiqqup@users.noreply.github.com"; 
-        userName  = "hiqqup";# these two unfortuantely do nothing
+        settings.user ={
+            email = "71655937+Hiqqup@users.noreply.github.com"; 
+            name  = "hiqqup";
+        };
     };
 
     dconf.settings = {
