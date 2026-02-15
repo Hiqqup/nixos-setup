@@ -33,7 +33,6 @@ in
         jetbrains.clion
         cmake
         gcc13
-        emscripten
         # assets
         blender
         krita
